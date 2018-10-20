@@ -1,6 +1,6 @@
 5.times do 
-	Post.create({
-		title: Faker::Book.title,
-		body: Faker::Lorem.sentence
+	JobApplication.create({
+		data: Faker::Book.title,
+		status: true
 	})
 end
