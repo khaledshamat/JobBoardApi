@@ -6,9 +6,10 @@
 end
 
 User.create({
-	email: "admin@bd.com",
+	email: "admin@test.com",
 	password:"123456",
-	password_confirmation:"123456"
+	password_confirmation:"123456",
+	admin: true
 })
 
 3.times do 

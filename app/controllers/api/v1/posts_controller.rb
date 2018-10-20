@@ -3,8 +3,12 @@ module Api
 		class PostsController < ApplicationController
 
 			def index
-				posts = Post.order('created_at DESC')
-				render json: {status: 'Success', message: 'Loaded Posts', data:posts}, status: :ok
+				if user_signed_in?
+					posts = Post.order('created_at DESC')
+					render json: {status: 'Success', message: 'Loaded Posts', data:posts}, status: :ok
+				else
+					render json: {status: 'Failed', message: 'User Is Not Signed In', data:"Not Signed In"}, status: :unautheraized
+				end
 			end
 
 			def show
