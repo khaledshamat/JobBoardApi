@@ -3,7 +3,9 @@
 one:
   data: MyText
   status: false
+  user: one
 
 two:
   data: MyText
   status: false
+  user: two
